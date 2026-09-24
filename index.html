@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wren Hale · Shop the Reel · Renter-friendly rooms that look expensive</title>
+<meta name="description" content="Watch the Reel, shop it in the same screen. Renter-friendly DIYs, Amazon finds and dupes from Wren's 650 sq ft Austin rental, filtered by room and budget, with the price and the date.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wren Hale · Shop the Reel">
+<meta property="og:description" content="Renter-friendly rooms that look expensive. Every product from my Reels, by room and budget, with the price and the date.">
+<meta property="og:image" content="img/sun.jpg">
+<meta name="pinterest-rich-pin" content="true">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="disc">As an Amazon Associate I earn from qualifying purchases. <a href="disclosure.html">How this site makes money</a></div>
+<nav class="top" id="nav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="mark"><img src="img/sun.jpg" alt=""></span><span class="bt"><span class="bn">wren hale</span><span class="bs">small-space stylist · Austin TX</span></span></a>
+  <ul id="menu">
+    <li><a href="#week" aria-current="page">This week</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#rooms">My apartment</a></li>
+    <li><a href="#guides">Guides</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="cta"><a class="btn dark sm" href="https://www.instagram.com/wrenhale.home/">Follow on Instagram</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></nav>
+
+<main>
+
+<!-- ===== SHOP THE REEL ===== -->
+<section class="reel-hero" id="week">
+  <div class="wrap reel-grid">
+    <div class="phone">
+      <div class="screen">
+        <video id="reelVideo" muted playsinline autoplay preload="metadata" poster="video/thu.jpg"></video>
+        <span class="play">▶ Reel</span>
+        <div class="rlab" id="reelLabel"></div>
+      </div>
+    </div>
+    <div class="reel-side">
+      <div class="eyebrow">Shop the Reel · new every evening</div>
+      <h1>Watch it. Shop it. Same screen.</h1>
+      <p class="lead">I'm Wren. 650 square feet in Austin, a landlord who says no to holes, and a habit of finding the $38 version of the $400 thing. Every product from this week's Reels is here with the price and the date I checked it.</p>
+      <div class="reel-nav" id="reelNav"></div>
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <button class="btn light sm" id="reelPrev" type="button">← Previous Reel</button>
+        <button class="btn light sm" id="reelNext" type="button">Next Reel →</button>
+      </div>
+      <div class="reel-products" id="reelProducts"></div>
+      <p class="price-note">Product prices and availability are accurate as of the date indicated and are subject to change. "About $" is what I paid or saw on that day.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div><span>No drill. No nails. Landlord will never know.</span><span>This looked like $400. It was $38.</span><span>Peel. Stick. Done. Deposit safe.</span><span>Studio apartment, hotel energy.</span><span>The $20 swap that made my kitchen look custom.</span><span>No drill. No nails. Landlord will never know.</span><span>This looked like $400. It was $38.</span><span>Peel. Stick. Done. Deposit safe.</span><span>Studio apartment, hotel energy.</span><span>The $20 swap that made my kitchen look custom.</span></div></div>
+
+<!-- ===== FILTER BAR ===== -->
+<div class="fbar" id="shop">
+  <div class="wrap">
+    <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search finds… (handles, lamp, curtain)" aria-label="Search products"></label>
+    <div class="fgroup" data-key="room" aria-label="Room">
+      <button type="button" data-v="all" aria-pressed="true">All rooms</button>
+      <button type="button" data-v="bedroom" aria-pressed="false">Bedroom</button>
+      <button type="button" data-v="kitchen" aria-pressed="false">Kitchen</button>
+      <button type="button" data-v="living" aria-pressed="false">Living</button>
+      <button type="button" data-v="bath" aria-pressed="false">Bath</button>
+      <button type="button" data-v="entry" aria-pressed="false">Entry</button>
+    </div>
+    <div class="fgroup" data-key="budget" aria-label="Budget">
+      <button type="button" data-v="all" aria-pressed="true">Any price</button>
+      <button type="button" data-v="20" aria-pressed="false">Under $20</button>
+      <button type="button" data-v="50" aria-pressed="false">Under $50</button>
+      <button type="button" data-v="100" aria-pressed="false">Under $100</button>
+    </div>
+    <div class="fgroup" data-key="kind" aria-label="Type">
+      <button type="button" data-v="all" aria-pressed="true">All</button>
+      <button type="button" data-v="DIY" aria-pressed="false">DIY</button>
+      <button type="button" data-v="Find" aria-pressed="false">Finds</button>
+      <button type="button" data-v="Dupe" aria-pressed="false">Dupes</button>
+    </div>
+    <button class="clear" id="clear" type="button">Clear</button>
+  </div>
+</div>
+
+<!-- ===== GRID ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Every find, by room and budget</div><h2 class="h-line">All the finds</h2><p>Exact item first. If it sells out, the "similar one" link is the dupe I would buy instead.</p></div>
+      <div class="muted" id="gridCount" style="font-variant-numeric:tabular-nums"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="price-note">Product prices and availability are accurate as of the date indicated and are subject to change.</p>
+  </div>
+</section>
+
+<!-- ===== SHOP MY APARTMENT ===== -->
+<section id="rooms">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Tap a number</div><h2 class="h-line">Shop my apartment</h2><p>Four corners of 650 square feet. Everything in frame is linked.</p></div></div>
+    <div class="rooms">
+      <div class="room">
+        <div class="shot"><img src="img/wed.jpg" alt="Wren's bedroom with a white hotel-style bed" loading="lazy">
+          <button class="hs" style="left:52%;top:62%" aria-label="Item 1">1</button>
+          <button class="hs" style="left:30%;top:48%" aria-label="Item 2">2</button>
+          <button class="hs" style="left:72%;top:80%" aria-label="Item 3">3</button></div>
+        <div class="legend"><h3>Bedroom</h3>
+          <a href="https://www.amazon.com/s?k=hotel+style+white+duvet+cover+set+queen&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>1</i>Hotel-style white duvet set<span class="pr">$58</span></a>
+          <a href="https://www.amazon.com/s?k=hotel+pillows+queen+2+pack&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>2</i>Two extra pillows<span class="pr">$24</span></a>
+          <a href="https://www.amazon.com/s?k=sage+green+waffle+knit+throw+blanket&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>3</i>Sage waffle throw<span class="pr">$26</span></a>
+        </div>
+      </div>
+      <div class="room">
+        <div class="shot"><img src="img/mon.jpg" alt="Wren's rental kitchen with white cabinets" loading="lazy">
+          <button class="hs" style="left:42%;top:56%" aria-label="Item 1">1</button>
+          <button class="hs" style="left:22%;top:30%" aria-label="Item 2">2</button>
+          <button class="hs" style="left:80%;top:70%" aria-label="Item 3">3</button></div>
+        <div class="legend"><h3>Kitchen</h3>
+          <a href="https://www.amazon.com/s?k=adhesive+cabinet+handles+matte+black+no+drill&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>1</i>Peel & stick cabinet handles<span class="pr">$19</span></a>
+          <a href="https://www.amazon.com/s?k=rechargeable+puck+lights+under+cabinet&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>2</i>Under-cabinet puck lights<span class="pr">$22</span></a>
+          <a href="https://www.amazon.com/s?k=faucet+sprayer+attachment+matte+black+pull+down&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>3</i>Matte black faucet sprayer<span class="pr">$20</span></a>
+        </div>
+      </div>
+      <div class="room">
+        <div class="shot"><img src="img/sun.jpg" alt="Wren's living room with a fluted side table" loading="lazy">
+          <button class="hs" style="left:40%;top:66%" aria-label="Item 1">1</button>
+          <button class="hs" style="left:80%;top:52%" aria-label="Item 2">2</button>
+          <button class="hs" style="left:50%;top:88%" aria-label="Item 3">3</button></div>
+        <div class="legend"><h3>Living room</h3>
+          <a href="https://www.amazon.com/s?k=fluted+round+side+table+white&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>1</i>Fluted round side table<span class="pr">$38</span></a>
+          <a href="https://www.amazon.com/s?k=beige+linen+loveseat+small+apartment&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>2</i>Linen loveseat<span class="pr">$329</span></a>
+          <a href="https://www.amazon.com/s?k=jute+area+rug+5x7&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>3</i>Jute rug 5×7<span class="pr">$64</span></a>
+        </div>
+      </div>
+      <div class="room">
+        <div class="shot"><img src="img/sat.jpg" alt="Wren's entry with a curtain over the closet door" loading="lazy">
+          <button class="hs" style="left:50%;top:38%" aria-label="Item 1">1</button>
+          <button class="hs" style="left:50%;top:70%" aria-label="Item 2">2</button>
+          <button class="hs" style="left:14%;top:52%" aria-label="Item 3">3</button></div>
+        <div class="legend"><h3>Entry & closet</h3>
+          <a href="https://www.amazon.com/s?k=tension+curtain+rod+28+to+48+inch&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>1</i>Tension rod<span class="pr">$12</span></a>
+          <a href="https://www.amazon.com/s?k=linen+look+curtain+panel+84+inch&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>2</i>Linen-look curtain<span class="pr">$19</span></a>
+          <a href="https://www.amazon.com/s?k=adhesive+wall+hooks+brass+heavy+duty&tag=wrenhale-20" target="_blank" rel="noopener sponsored"><i>3</i>Brass adhesive hooks<span class="pr">$11</span></a>
+        </div>
+      </div>
+    </div>
+    <p class="price-note">Prices as of 25 Sep 2026 and subject to change.</p>
+  </div>
+</section>
+
+<!-- ===== GUIDES ===== -->
+<section id="guides">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Save to Pinterest</div><h2 class="h-line">Guides</h2><p>Dated roundups. Every item has a price, a reason, and a way to remove it on move-out day.</p></div></div>
+    <div class="guides">
+      <a class="gcard" href="guides/no-drill-walls.html"><img src="img/pins/walls.jpg" alt="9 no-drill wall fixes under $40" loading="lazy"><div class="body"><b>9 No-Drill Wall Fixes Under $40</b><small>Updated 25 Sep 2026 · 9 items</small></div></a>
+      <a class="gcard" href="guides/rental-kitchen.html"><img src="img/pins/kitchen.jpg" alt="7 rental kitchen upgrades under $25" loading="lazy"><div class="body"><b>7 Rental Kitchen Upgrades Under $25</b><small>Updated 25 Sep 2026 · 7 items</small></div></a>
+      <a class="gcard" href="guides/small-bedroom.html"><img src="img/pins/bedroom.jpg" alt="Small bedroom, hotel energy: 6 buys" loading="lazy"><div class="body"><b>Small Bedroom, Hotel Energy: 6 Buys</b><small>Updated 25 Sep 2026 · 6 items</small></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / TRUST ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <img src="img/wed.jpg" alt="Wren in her studio apartment" loading="lazy">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2>Hi, I'm Wren. I'm AI-generated, and I say so.</h2>
+        <p>The apartment, the products and the prices are real. The face is made with AI, it's labelled on every profile, and nothing here is a sponsored pick. I show what fits a 650 sq ft rental, comes off on move-out day, and costs less than the thing it looks like.</p>
+        <div class="trust">
+          <div><b>Every price has a date</b>Checked on the day shown. If it moved, the date tells you.</div>
+          <div><b>Exact item + a dupe</b>Decor sells out weekly. The backup link is the one I'd buy instead.</div>
+          <div><b>Renter-removable only</b>If it needs a drill or leaves a mark, it isn't on this site.</div>
+          <div><b>4.3 stars, 500+ reviews</b>My floor for anything I link. <a href="about.html">How I pick →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD MAGNET ===== -->
+<section>
+  <div class="wrap">
+    <div class="lead-box">
+      <div>
+        <div class="eyebrow" style="color:var(--gold)">Free download</div>
+        <h2>The No-Drill Move-In Checklist</h2>
+        <p>Everything I do in the first weekend of a new rental, in order, with the product for each step and what it costs. One page. Print it, tape it to the fridge.</p>
+        <ul><li>27 steps, room by room</li><li>Total under $300 for a whole studio</li><li>The move-out removal list on the back</li></ul>
+      </div>
+      <div>
+        <form id="leadForm" action="#" method="post">
+          <input type="email" id="leadEmail" name="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Send me the checklist</button>
+          <small>One email a week after that: the single find worth buying. Unsubscribe any time.</small>
+        </form>
+        <div class="ok" id="leadOk" hidden>Sent. Check your inbox (and the promotions tab).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><b>wren hale</b><br>Renter-friendly rooms that look expensive. Austin TX. AI-generated creator.</div>
+    <div><b>Site</b><ul><li><a href="#week">This week's Reels</a></li><li><a href="#guides">Guides</a></li><li><a href="about.html">About</a></li><li><a href="disclosure.html">Disclosures</a></li></ul></div>
+    <div><b>Elsewhere</b><ul><li><a href="https://www.instagram.com/wrenhale.home/">Instagram</a></li><li><a href="mailto:wrenhale.home@gmail.com">wrenhale.home@gmail.com</a></li></ul></div>
+  </div>
+  <div class="legal">As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. © 2026 Wren Hale.</div>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
