@@ -4,6 +4,8 @@ window.WREN = {
   tag: "wrenhale-20",
   asOf: "25 Sep 2026",
   reels: [
+    { id:"2026-09-27-a", day:"27 Sep", kind:"Find", hook:"Viral backsplash: worth it?", title:"Peel-and-stick backsplash, tested", room:"kitchen", video:"video/ig/2026-09-27-a.mp4", poster:"video/ig/2026-09-27-a.jpg", page:"reels/2026-09-27-a.html", products:["backsplash","alcohol","level"] },
+    { id:"2026-09-26-a", day:"26 Sep", kind:"DIY",  hook:"Ugly rental shower. $29 fix.", title:"Peel-and-stick shower tile", room:"bath", video:"video/ig/2026-09-26-a.mp4", poster:"video/ig/2026-09-26-a.jpg", page:"reels/2026-09-26-a.html", products:["shower","alcohol","caddy"] },
     { id:"thu", day:"Thu", kind:"DIY",  hook:"No drill. No nails.",         title:"The $38 headboard wall",           room:"bedroom", video:"video/thu.mp4", poster:"video/thu.jpg", products:["panels","tape","level"] },
     { id:"fri", day:"Fri", kind:"Find", hook:"Nobody talks about this",     title:"Counter lights, no electrician",   room:"kitchen", video:"video/fri.mp4", poster:"video/fri.jpg", products:["puck","strip"] },
     { id:"sat", day:"Sat", kind:"DIY",  hook:"Ugliest thing. $12 fix.",     title:"Hide the closet door",             room:"entry",   video:"video/sat.mp4", poster:"video/sat.jpg", products:["rod","curtain"] },
@@ -32,6 +34,7 @@ window.WREN = {
     { id:"mirror",  name:"Arched leaner mirror, 64 in", why:"Leans, never hangs. Doubles the light in a studio.", price:89, room:"living", kind:"Dupe", flag:"restock", img:"img/products/mirror.jpg", q:"arched full length leaner mirror gold", dupe:"arch floor mirror 64 inch" },
     { id:"hooks",   name:"Adhesive wall hooks, brass (6)", why:"Coats by the door without a single hole. Hold 5 lb each.", price:11, room:"entry", kind:"Find", img:"img/products/hooks.jpg", q:"adhesive wall hooks brass heavy duty", dupe:null },
     { id:"shower",  name:"Peel & stick shower tile sheets", why:"Covers the beige 1994 tile. Waterproof, removable on move-out.", price:29, room:"bath", kind:"DIY", flag:"restock", img:"img/products/shower.jpg", q:"peel and stick shower wall tile waterproof", dupe:"peel and stick bathroom tile" },
+    { id:"backsplash", name:"Peel-and-stick backsplash tile", why:"The viral one. Held up behind my stove. Work row by row so the grout lines match.", price:29, room:"kitchen", kind:"DIY", flag:"new", img:"img/products/backsplash.jpg", q:"peel and stick backsplash tile kitchen", dupe:"vinyl peel and stick subway tile backsplash" },
     { id:"caddy",   name:"Rustproof hanging shower caddy", why:"Hangs over the head. Nothing suction-cupped falls at 3 am.", price:17, room:"bath", kind:"Find", img:"img/products/caddy.jpg", q:"rustproof hanging shower caddy black", dupe:null }
   ]
 };

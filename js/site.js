@@ -30,7 +30,7 @@
   function showReel(i){
     cur=i; var r=D.reels[i];
     if(video){ video.pause(); video.setAttribute('poster',r.poster); video.src=r.video; video.load(); if(!reduce){video.play().catch(function(){});} }
-    rlab.innerHTML='<b>'+r.hook+'</b><small>'+r.day+' · '+kindLabel[r.kind]+' · '+r.title+'</small>';
+    rlab.innerHTML='<b>'+r.hook+'</b><small>'+r.day+' · '+kindLabel[r.kind]+' · '+r.title+(r.page?' · <a href="'+r.page+'">Full list →</a>':'')+'</small>';
     rprod.innerHTML=r.products.map(function(id){var p=byId[id]; if(!p) return '';
       return '<a class="rp" href="'+amz(p.q)+'" target="_blank" rel="noopener sponsored">'+
         '<img src="'+p.img+'" alt="" loading="lazy"><div>'+(p.flag==='new'?'<span class="badge">New this week</span>':'')+
